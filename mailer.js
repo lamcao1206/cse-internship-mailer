@@ -6,7 +6,7 @@ const credentialsPath = path.join('credentials.json');
 
 const credentials = JSON.parse(fs.readFileSync(credentialsPath, 'utf-8'));
 
-const transporter = createTransport({
+export const transporter = createTransport({
   host: 'smtp.gmail.com',
   port: 465,
   secure: true,
