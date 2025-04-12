@@ -2,7 +2,7 @@
 
 This project is a Node.js application designed to monitor a webpage for new company logos, download their images, and send email notifications when new companies are detected.
 
-Fun fact: This is a Node.js version of a [Spring Boot repository](https://github.com/example/spring-boot-internship-mailer) that implements similar functionality using Java and Spring Boot. While that project using Telegram Bot for notification, this project using Gmail, which is more convenient for notification.
+Fun fact: This is a Node.js version of my [Spring Boot Bot](https://github.com/lamcao1206/intern-bot-notifier) that implements similar functionality using Java and Spring Boot. While that project using Telegram Bot for notification, this project using Gmail, which is more convenient for notification.
 
 ---
 
@@ -49,7 +49,31 @@ Fun fact: This is a Node.js version of a [Spring Boot repository](https://github
 3. Create a `credentials.json` file in the root directory with the following structure:
 
 ```bash
-PORT=<your_post>
-TARGET_URL=https://internship.cse.hcmut.edu.vn/
-EMAIL=<your_email_you_want_to_get_notification>
+	PORT=<your_post>
+	TARGET_URL=https://internship.cse.hcmut.edu.vn/
+	EMAIL=<your_email_you_want_to_get_notification>
 ```
+
+---
+
+## Usage
+
+Run the application using the following command:
+
+```bash
+	yarn dev
+```
+
+The server will start and listen on the specified port (default: 3000)
+
+---
+
+## Notes
+
+- Security:
+  - Do not commit credentials.json to version control. Add it to .gitignore.
+  - Use environment variables or a secure secrets manager for sensitive data in production.
+- Error Handling:
+  - The application logs errors during scraping, downloading, or email sending.
+- Customization:
+  - Adjust the investigation interval in interval.js (default: 10 seconds).
