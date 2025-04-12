@@ -2,3 +2,6 @@ node_modules
 
 # Env vile
 .env
+
+# Credentials file
+credentials.json
